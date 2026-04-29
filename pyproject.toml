@@ -1,6 +1,6 @@
 [project]
 name = "simple-rands"
-version = "0.1.1"
+version = "0.1.2"
 description = "a very simple tool to generate random string with digits and numbers."
 authors = [
     {name = "GGN_2015",email = "neko@jlulug.org"}

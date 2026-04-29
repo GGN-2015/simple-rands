@@ -9,7 +9,7 @@ RNG = random.Random()
 def seed(value:int):
     RNG.seed(value)
 
-def gen(length:int, rng:Optional[random.Random]=None, char_pool=Optional[str]):
+def gen(length:int, rng:Optional[random.Random]=None, char_pool:Optional[str]=None):
     """
     Generate a random string of specified length containing lowercase letters, uppercase letters and numbers
     
@@ -36,7 +36,6 @@ def gen(length:int, rng:Optional[random.Random]=None, char_pool=Optional[str]):
     if char_pool is None:
         # Build character pool: lowercase letters + uppercase letters + digits
         char_pool = string.ascii_lowercase + string.ascii_uppercase + string.digits
-    assert isinstance(char_pool, str)
     
     # Randomly select specified number of characters from the character pool and concatenate into a string
     random_chars = [rng.choice(char_pool) for _ in range(length)]
